@@ -31,45 +31,14 @@
 
 <%
 		com.psl.model.Wallet w = (com.psl.model.Wallet)session.getAttribute("w");
-		
-try
-{
-Class.forName("com.mysql.jdbc.Driver");
-String url="jdbc:mysql://localhost/mobilewallet";
-String username="root";
-String password="12345";
-String query="select * from transactions where id ="+ w.getId();
-Connection conn=DriverManager.getConnection(url,username,password);
-Statement stmt=conn.createStatement();
-ResultSet rs=stmt.executeQuery(query);
-while(rs.next())
-{
-
 %>
-    <tr><td><%=rs.getInt("tid") %></td>
-    <td><%=rs.getInt("id") %></td>
-    <td><%=rs.getInt("receive") %></td>
-    <td><%=rs.getInt("send") %></td>
-     <td><%=rs.getInt("amount") %></td></tr>
-        <%
-
-}
-%>
-    </table>
-    <%
-    rs.close();
-    stmt.close();
-    conn.close();
-    }
-catch(Exception e)
-{
-    e.printStackTrace();
-    }
+	
+	
 
 
-
-
-%>
+    
+   
+    
 
 
 
@@ -130,19 +99,51 @@ catch(Exception e)
 	</ul>
 
 	<div id="tab-1" class="tab-content current">
+	<%	
+	try
+	{
+		Class.forName("com.mysql.jdbc.Driver");
+		String url="jdbc:mysql://localhost/mobilewallet";
+		String username="root";
+		String password="12345";
+		String query="select * from transactions where id ="+ w.getId();
+		Connection conn=DriverManager.getConnection(url,username,password);
+		Statement stmt=conn.createStatement();
+		ResultSet rs=stmt.executeQuery(query);
+		while(rs.next())
+		{
+		%>
          <table>    
-                        <thead>        
-                        <tr>            
-                            <th>Transaction ID</th>                        
-                            <th>Transaction Type</th>            
-                            <th>Sender's Name</th>           
-                            <th>Receiver's Name</th>         
-                        </tr>    
-                        </thead>    
-                        <tbody>        
-                            
-                        </tbody>
-                    </table>
+         	<thead>        
+            	<tr>            
+                	<th>Transaction ID</th>                        
+                    <th>Transaction Type</th>            
+                    <th>Sender's Name</th>           
+                    <th>Receiver's Name</th>         
+                </tr>    
+            </thead>    
+            <tbody>        
+            	<tr><td><%=rs.getInt("tid") %></td>
+    				<td><%=rs.getInt("id") %></td>
+  					<td><%=rs.getInt("receive") %></td>
+					<td><%=rs.getInt("send") %></td>
+     				<td><%=rs.getInt("amount") %></td></tr>
+        <%
+		}
+		%>
+            </tbody>
+          </table>
+        
+        <%
+    	rs.close();
+    	stmt.close();
+    	conn.close();
+    }
+	catch(Exception e)
+	{
+    	e.printStackTrace();
+    }
+	%>
 	</div>
 	<div id="tab-2" class="tab-content">
 		  <table>    
@@ -157,6 +158,11 @@ catch(Exception e)
                             <th>Amount</th>          
                         </tr>    
                         </thead>    
+                        
+                        
+                        
+                        
+                        
                         <tbody>        
                         
                         </tbody>
