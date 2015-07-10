@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">m-wallet</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="title_section1">Send</string>
+    <string name="title_section2">Add</string>
+    <string name="title_section3">Adhaar</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_home_page">HomePage</string>
+
+</resources>

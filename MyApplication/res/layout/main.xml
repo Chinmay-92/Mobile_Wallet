@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:layout_marginBottom="20dip" android:background="@drawable/ibi">
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:layout_marginBottom="20dip"
+			android:layout_marginTop="20dip" android:gravity="center">
+			<ImageView android:src="@drawable/icon"
+				android:layout_height="50dip" android:id="@+id/imageView1"
+				android:layout_width="50dip" android:paddingBottom="10dip"></ImageView>
+		</LinearLayout>
+
+		<TableRow android:layout_width="match_parent" android:id="@+id/tableRow1"
+			android:gravity="center" android:layout_height="wrap_content"
+			android:paddingBottom="20dip">
+			<EditText android:text="" android:hint="   Enter Name"
+				android:id="@+id/etnm" android:layout_height="50dip"
+				android:textColor="#FFFFFF" android:layout_width="250dip"
+				android:background="#70000000" android:drawableLeft="@drawable/name" />
+		</TableRow>
+
+		<TableRow android:layout_width="match_parent" android:id="@+id/tableRow2"
+			android:gravity="center_horizontal" android:layout_height="wrap_content"
+			android:paddingBottom="20dip">
+			<EditText android:id="@+id/etem" android:drawableLeft="@drawable/email"
+				android:inputType="textEmailAddress" android:layout_height="50dip"
+				android:layout_width="250dip" android:textColor="#FFFFFF"
+				android:background="#70000000" android:hint="   Enter Email"></EditText>
+		</TableRow>
+
+		<TableRow android:layout_width="match_parent" android:id="@+id/tableRow7"
+			android:gravity="center_horizontal" android:layout_height="wrap_content"
+			android:paddingBottom="20dip">
+			<EditText android:id="@+id/mob" android:drawableLeft="@drawable/email"
+				android:inputType="number" android:layout_height="50dip"
+				android:layout_width="250dip" android:textColor="#FFFFFF"
+				android:background="#70000000" android:hint="   Enter Mobile No"></EditText>
+		</TableRow>
+		
+		
+		<TableRow android:layout_width="match_parent" android:id="@+id/tableRow3"
+			android:gravity="center_horizontal" android:layout_height="wrap_content"
+			android:paddingBottom="20dip">
+			<EditText android:text="" android:hint="   Enter Username"
+				android:id="@+id/etuser" android:layout_width="250dip"
+				android:layout_height="50dip" android:textColor="#FFFFFF"
+				android:background="#70000000" android:drawableLeft="@drawable/username" />
+		</TableRow>
+
+		<TableRow android:layout_width="match_parent" android:id="@+id/tableRow4"
+			android:gravity="center_horizontal" android:layout_height="wrap_content"
+			android:paddingBottom="20dip">
+			<EditText android:text="" android:hint=" Enter Password"
+				android:id="@+id/password" android:layout_width="250dip"
+				android:layout_height="50dip" android:inputType="textPassword"
+				android:textColor="#FFFFFF" android:background="#70000000"
+				android:drawableLeft="@drawable/password" />
+		</TableRow>
+
+		<TableRow android:layout_width="match_parent" android:id="@+id/tableRow5"
+			android:gravity="center_horizontal" android:layout_height="wrap_content"
+			android:paddingBottom="20dip">
+			<EditText android:text="" android:hint=" Retype Password"
+				android:id="@+id/etrpass" android:layout_width="250dip"
+				android:layout_height="50dip" android:inputType="textPassword"
+				android:textColor="#FFFFFF" android:background="#70000000"
+				android:drawableLeft="@drawable/confirmpass" />
+		</TableRow>
+
+		<TableRow android:layout_width="match_parent" android:id="@+id/tableRow6"
+			android:gravity="center_horizontal" android:paddingTop="10dip"
+			android:layout_height="wrap_content">
+			<Button android:id="@+id/sign" android:layout_width="250dip"
+				android:text="Register" android:textColor="#FFFFFF"
+				android:background="#00BFFF" android:layout_height="40dip"
+				android:textSize="20dp" />
+		</TableRow>
+
+	</LinearLayout>
+</ScrollView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="match_parent" android:orientation="vertical"
+		android:background="@drawable/ibi" >
+		
+		<LinearLayout android:layout_height="wrap_content"
+			android:paddingBottom="20dip" android:paddingTop="20dip" android:layout_width="match_parent"
+			android:id="@+id/linearLayout1" android:gravity="center">
+			<ImageView android:src="@drawable/icon"
+			android:layout_height="50dip" android:id="@+id/imageView1"
+			android:layout_width="50dip" android:paddingBottom="10dip"></ImageView>
+		</LinearLayout>
+
+		<TableRow android:layout_width="match_parent"
+			android:paddingBottom="20dip" android:id="@+id/tableRow2"
+			android:gravity="center_horizontal" android:layout_height="wrap_content">
+			<EditText android:text="" android:id="@+id/etun1"
+				android:textColor="#FFFFFF" android:inputType="textEmailAddress"
+				android:layout_width="250dip" android:layout_height="50dip"
+				android:background="#70000000" android:drawableLeft="@drawable/user"
+				android:hint="    Enter Username" />
+		</TableRow>
+
+		<TableRow android:layout_width="match_parent"
+			android:paddingBottom="20dip" android:id="@+id/tableRow3"
+			android:gravity="center_horizontal" android:layout_height="wrap_content">
+			<EditText android:text="" android:id="@+id/etps"
+				android:textColor="#FFFFFF" android:inputType="textPassword"
+				android:layout_width="250dip" android:layout_height="50dip"
+				android:background="#70000000" android:drawableLeft="@drawable/key"
+				android:hint="  Enter Password" />
+		</TableRow>
+
+		<TableRow android:layout_width="match_parent"
+			android:paddingBottom="20dip" android:id="@+id/tableRow4"
+			android:gravity="center_horizontal" android:layout_height="wrap_content"
+			android:paddingTop="20dip">
+			<Button android:id="@+id/login" android:layout_width="250dip"
+				android:text="Login" android:textColor="#FFF" android:background="#FFA500"
+				android:layout_height="40dip" />
+		</TableRow>
+
+		<TableRow android:layout_width="match_parent"
+			android:paddingBottom="20dip" android:id="@+id/tableRow5"
+			android:gravity="center_horizontal" android:layout_height="wrap_content">
+			<TextView android:layout_width="250dip" android:gravity="center"
+				android:textColor="#00BFFF" android:id="@+id/signin"
+				android:layout_height="wrap_content" android:text="New here? Sign Up"></TextView>
+		</TableRow>
+
+	</LinearLayout>
+</ScrollView>
